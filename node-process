@@ -1,0 +1,14 @@
+1,进程对象是什么？process
+2,如何获得当前程序宿主的 CPU 架构？process.arch
+3,如何获得当前程序宿主的系统信息？process.platform
+4,如何获得当前进程的 ID？process.pid
+5,如何获得 node.js 执行的绝对路径？process.execPat
+6,使进程不结束的两种方法是什么？process.stdin.resume()
+7,如何获得当前用户的 ID?process.getuid()
+8,如何获得当前位置路径？process.cwd()
+9,如何查看系统的常驻内存大小？process.memoryUsage().rss
+10,如何查看 V8 动态分配的总内存大小？process.memoryUsage().heapTotal
+11,如何查看 v8 动态分配的已用内存大小？process.memoryUsage().heapUsed
+12,如何查看 v8 管理的绑定到 JS 对象上的 C++ 对象的内存？process.memoryUsage().extemal
+13,如何获得命令行参数？process.argv
+14,在命令行中如何查看程序退出码？echo $?
