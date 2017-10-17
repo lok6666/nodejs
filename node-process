@@ -11,4 +11,31 @@
 11,如何查看 v8 动态分配的已用内存大小？process.memoryUsage().heapUsed
 12,如何查看 v8 管理的绑定到 JS 对象上的 C++ 对象的内存？process.memoryUsage().extemal
 13,如何获得命令行参数？process.argv
-14,在命令行中如何查看程序退出码？echo $?
+14,如何指定退出码？process.exit();然后在命令行执行程序时后面跟上指定的退出码.
+15,在命令行中如何查看程序退出码？echo $?
+16,标准输入流
+var me = {};
+var i =1;
+var msg = {'name','email','QQ','moable'};
+process.stdin.on('data',function(){
+var cmd = ' me.'+msg[i-1]+'="'+data.slice(0,data.length-1)+'"';
+eval(cmd);
+console.log(msg[i++]+":");
+})
+process.stdin.on('end',function(){
+console.log(me);
+}).
+17,响应信号量
+process.on(‘事件名称’，function(){})
+'SIGINT'==Ctrl+c
+'SIGTSTP'==ctrl+z
+用kill命令发出消息。
+用键盘发出消息。
+用程序发出消息。
+18,延迟执行和取消延迟执行的函数是什么？以及他们如何使用？
+setTimeout(回调函数，延迟时长)
+clearTimeout(id)
+19,周期执行和取消周期执行的函数是什么？以及他们怎么使用？
+setInterval(回调函数，间隔时长)
+unret()直接销毁定时器。
+clearInterval(id)
