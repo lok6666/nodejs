@@ -1,0 +1,19 @@
+1,Buffer 对象的用途是什么？
+处理二进制数据流
+2,如何实例化一个 Buffer 对象？
+var buf = new Buffer();
+3,Buffer 对象的填充方法是什么？
+fill();
+var buf = new Buffer();
+var end = bufslice(250,256);
+end.fill(0
+4,可以打印字符串
+var buf = new Buffer("hello world","utf-8");
+console.log("\nbuf2",buf2.length,buf2.tostring('编码类型'));
+nodejs支持的6个字符编码
+'ascil':支持7位ASCLL数据
+'utf-8：多字节编码的Unicode字符。
+'utf16le'：2或4个字节。
+'base64'：
+'binacy'：'latinl'
+,'hex'：将每个字节编码分为两个16进制字符
