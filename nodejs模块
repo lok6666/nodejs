@@ -1,0 +1,10 @@
+1，commonjs定义了require(模块引用),exports(模块定义),module(模块标识)，
+2，全局模块不需要使用require。
+3，安装第三方模块到本地：npm install（子命令） 模块名 -S
+4，npm init初始化packjson。
+5，自定义模块(编写的程序)
+module.exports = （暴露的函数或者对象）Math.PI;
+console.log(\nxxxxx\n'',module);
+调用模块
+var pi =require('xxxxx');
+console.log("pi",pi);
