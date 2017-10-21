@@ -8,3 +8,22 @@ console.log(\nxxxxx\n'',module);
 调用模块
 var pi =require('xxxxx');
 console.log("pi",pi);
+6，前端的：AMD
+后端的：CommonJS。
+7，npm缩写于 Node Packaged Modules, 是 node.js 的模块管理器
+8，使用 package.json 配置文件管理第三方模块的过程是怎样的？
+ 1. 初始化一个 package.json 文件：npm init
+ 2. 安装第三方模块：npm install moduleName -S(--save)
+ 3. 发布程序和 package.json 配置文件
+ 4. 使用时：运行 npm install 安装第三方模块
+9，用什么方法让别人可以使用我们自定义的模块？
+    module.exports = something
+10，node.js 中的顶层对象是什么？
+    window
+11，查看 module 时，都包含哪些属性？
+id：模块的识别符，通常是带有绝对路径的模块文件名
+exports：表示模块对外输出的值
+parent：返回一个对象，表示调用该模块的模块
+filename：模块的文件名，带有绝对路径
+children：返回一个数组，表示该模块要用到的其他模块
+loaded：返回一个布尔值，表示模块是否已经完成加载
