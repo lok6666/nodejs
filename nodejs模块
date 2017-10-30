@@ -3,7 +3,7 @@
 3，安装第三方模块到本地：npm install（子命令） 模块名 -S
 4，npm init初始化packjson。
 5，自定义模块(编写的程序)
-module.exports = （暴露的函数或者对象）Math.PI;
+module.exports = （暴露的函数或者对象）Math.PI  or  function(){};
 console.log(\nxxxxx\n'',module);
 调用模块
 var pi =require('xxxxx');
