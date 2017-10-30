@@ -9,3 +9,28 @@ promise对象。
 事件名称
 on绑定
 事件处理函数
+4,通过EventEmitter解决异步多状态响应问题。
+5，引用模块+响应事件+触发事件
+var EventEmitter = require('event').Eventemitter;
+var emitter = new EventEmitter();
+emitter.on('hello',function(){
+console.log("hahahahaha");
+})
+setTimeout(function(){}
+emitter.on('hello');
+,5000).
+6,事件继承：使自己的类有事件机制的两种方法分别是什么？
+1. 让自己的类继承 EventEmitter 类（原型继承）
+var event = require('event');
+function dog(name){
+  event.Eventemitter.call(this);
+  var self = yhis;
+  this.name = name;
+  var timer = setInterval(function(){
+  self.emit('haha')},1000);
+  this.stop = function(){
+  clearInterval(timer);}
+  }
+  dog.prototype.__proto__=event.EventEmitter.prototype;
+
+2. 把 EventEmitter 类中的方法复制到自己的类中（又叫混合方式）
