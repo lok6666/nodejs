@@ -20,17 +20,19 @@ setTimeout(function(){}
 emitter.on('hello');
 ,5000).
 6,事件继承：使自己的类有事件机制的两种方法分别是什么？
-1. 让自己的类继承 EventEmitter 类（原型继承）
-var event = require('event');
-function dog(name){
-  event.Eventemitter.call(this);
-  var self = yhis;
-  this.name = name;
-  var timer = setInterval(function(){
-  self.emit('haha')},1000);
-  this.stop = function(){
-  clearInterval(timer);}
-  }
-  dog.prototype.__proto__=event.EventEmitter.prototype;
-
-2. 把 EventEmitter 类中的方法复制到自己的类中（又叫混合方式）
+    1. 让自己的类继承 EventEmitter 类（原型继承）
+    var event = require('event');
+    function dog(name){
+      event.Eventemitter.call(this);
+      var self = yhis;
+      this.name = name;
+      var timer = setInterval(function(){
+      self.emit('haha')},1000);
+      this.stop = function(){
+      clearInterval(timer);}
+      }
+      dog.prototype.__proto__=event.EventEmitter.prototype;
+       module.exports = Dog;
+    2. 把 EventEmitter 类中的方法复制到自己的类中（又叫混合方式）
+7,util 的 inherits 方法的使用格式是怎样的？
+  util.inherits(继承者，被继承者);
