@@ -1,0 +1,33 @@
+#cat#
+##一，底层API##
+1. fs.openSync(“文件名“，打开方式);打开文件。
+2. var a=fs.statSync().size;文件大小。
+         fs.statSync().isFile()判断是否为为文件;
+3. fs.readSync('文件'，"类型"，0，a(长度),0);
+4. fs.closeSync();关闭文件。
+##二，异步API##（效率高）
+1. fs.readFile(文件名，function(err,buf){
+      if(err){
+      console.log(err.message);
+      process.exit(i);
+      }else{
+      console.log(buf.toString('utf8'));
+      }
+    });
+##三，同步API##（阻塞方式）
+1. fs.readFileSync(文件名).toString("编码格式");
+##四，混合模式##（0->stdin标准输入流。1->stdout标准输出流。2->stderr标准错误流。）
+1. fs.openSync();
+   console.log(fs.readFileSync().toString());->fs.writeSync(1,fs.readFileSync().toString());
+   fs.closeSync();
+##五，流的方式##
+1. fs.createReadStream(file).pipe(process.stdout);
+#cp#
+##流的方式##
+fs.createReadStream(文件1).pipe(fs.createWriteStream(文件2));
+#touch#
+fs.writeFileSync(文件名，"内容");
+#mv#
+fs.renameSync(文件1，文件2);
+#rm#
+fs.unlinkSync();
