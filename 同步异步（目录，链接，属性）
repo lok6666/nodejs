@@ -1,0 +1,22 @@
+#mkdir#
+1. fs.mkdirSync();
+#dir#(查看所有文件)
+1. fs.readdirSync();
+#rm#删除文件
+fs.rmdirSync();
+#创建链接#
+##硬链接##
+fs.linkSunc(源文件，链接文件);
+##符号链接##
+if(opt == "-s")
+fs.symlinkSunc(源文件，链接文件);
+./文件 -s 源文件 链接文件
+#属性#
+sudo  chown(改变文件所有者) gid uid 文件名
+cat /etc/passwd查看uid，gid
+fs.chownSync(文件名，NUmber(uid),Number(gid));
+#修改权限#
+fs.chmodSync(文件名，数值);
+#查看文件信息#
+fs.writeSync(1,fs.statSync(文件));
+
