@@ -21,4 +21,17 @@
            }
       })
       }).listen(8080);
-
+2，带行号查看某文件代码命令。
+cat -n  filename
+3，统计某文件行数命令。
+cat  filename| wc -l
+4,查看当前目录下脚本文件内所有代码。
+cat -n *.js
+5,统计当前目录下所有脚本非空代码行数命令。
+cat -n*.js |grep -v ^$|wc -l
+6,把字母换成大写命令。
+toUpperCase()
+7,在命令行请求服务器端的文件
+curl http://server_address:port/path/filename
+8,几种类型数据流
+可读流，可写流，双工流，传输流。
