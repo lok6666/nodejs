@@ -1,0 +1,29 @@
+
+#webhttp程模块#
+1，查看响应头信息：
+curl -i 响应网址。
+2，响应报文结构：
+状态行：HTTP/1.1（http版本） 200 0k（响应状态码5种：1xx几本信息，2xx成功信息，3xx重定向，4xx表示客户端错误，5xx表示服务器错误。）
+响应头部字段列表(键值对)：Date:响应时间。
+                        Connection:链接方式
+                        Content-Length:内容长度
+空行：
+响应主体:()
+2，发起http请求：telnet 响应网址
+3.1http协议码（HTTP statusCode）.
+3.2http.setHeader头文件信息.
+3.3end()执行完毕后输出字符。
+3.4post请求增加content-type:'application'。
+3.5req.headers打印头部信息。
+#web服务程序#
+#!/ser/bin/node
+var http = require('http');
+var url  = require('url');
+var root = __firname+(process[2]||"www");
+http.createServer(function(){
+var url = 'http://'+req.header.host+req.url;
+console.log('url:'+url);
+console.log(req.headers);
+var filename = root+req.url;
+fs.createreadStream(filename).pipe(res);
+})
