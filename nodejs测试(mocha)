@@ -12,3 +12,15 @@
    assert.equal(todo.getCount()（运行实际结果）,0（预期结果）,"正确！");
    assert.notequal(todo.getCount(),1,"正确");
    }
+4, 测试命令
+git init：初始化git版本库。
+npm init：初始化项目。
+npm install mocha -D：添加摩卡，放到node-module里面。
+npm install chai -D:添加断言库。
+git ci -m "init commit"添加版本库。
+5，摩卡断言库expect。
+discribe测试套件("测试套件名称"，function（）{
+it测试用例('测试用例名称',function()}{
+expect(测试对象).to.be.equal(0);
+}),
+})
