@@ -6,7 +6,9 @@
    var  Todo   = require("./todo");
    var  todo   = new Todo();
    function(){
+   console.log("hahaha");
    todo.add('delete me');
    todo.deleteALL();
-   assert.equal(todo.getCount()（运行实际结果）,0（预期结果）,"错了！");
+   assert.equal(todo.getCount()（运行实际结果）,0（预期结果）,"正确！");
+   assert.notequal(todo.getCount(),1,"正确");
    }
