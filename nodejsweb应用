@@ -27,3 +27,4 @@ console.log(req.headers);
 var filename = root+req.url;
 fs.createreadStream(filename).pipe(res);
 })
+##阿帕奇httpweb服务器类似于静态文件服务程序。
